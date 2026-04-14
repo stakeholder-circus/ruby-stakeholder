@@ -1,23 +1,23 @@
 # ruby-stakeholder Status
 
-- Role: selected next-20 local-only scaffold for Ruby
+- Role: selected next-20 local-only Ruby target
 - Parity class: full-parity
-- State: scaffold-ready-local-only
-- Rewrite completeness: 12%
-- Functionality completeness: 3%
+- State: deterministic first tranche implemented locally
+- Rewrite completeness: 34%
+- Functionality completeness: 26%
 - Branch: `main`
 - Origin: `git@github.com:stakeholder-circus/ruby-stakeholder.git`
 - Upstream: `https://github.com/giacomo-b/rust-stakeholder`
 
 ## Blockers
-- Implementation has not started.
 - Full live-provider/runtime support is deferred to the second-pass provider rollout wave.
 - Publication is blocked until the publication/governance wave completes and remote access is available.
+- Later families are intentionally grouped fallback work for this tranche.
 
 ## Next
-- Keep the scaffold baseline valid.
-- Add deterministic `classic-six + modern-core` implementation in the assigned tranche.
-- Keep grouped fallback for later families until the second wave.
+- Keep deterministic baseline behavior stable.
+- Expand later families only through the grouped fallback lane.
+- Keep first-push traceability rows current.
 
 ## Canonical references
 - `/Users/davidsupan/shareholder/stakeholder-core/docs/program/index.md`

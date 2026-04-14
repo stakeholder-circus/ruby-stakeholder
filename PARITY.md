@@ -4,9 +4,9 @@
 - Parity class: full-parity
 
 ## Review model
-- Rust remains the canonical source-of-truth.
+- Rust remains the imported upstream history.
 - `stakeholder-core` remains the behavioral contract.
-- This repo is deterministic-first for the initial tranche.
+- Ruby is the authoritative deterministic tranche in this repo.
 
 ## Promotion prerequisites
 - Deterministic `classic-six + modern-core` implemented.

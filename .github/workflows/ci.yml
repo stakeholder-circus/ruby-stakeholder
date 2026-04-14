@@ -5,29 +5,13 @@ on:
   pull_request:
 
 jobs:
-  native:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
-    steps:
-      - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@stable
-        with:
-          components: rustfmt, clippy
-      - name: Format
-        run: cargo fmt --check
-      - name: Lint
-        run: cargo clippy -- -D warnings
-      - name: Test
-        run: cargo test
-
-  docker:
+  contract-smoke:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build image
-        run: docker build -t rust-stakeholder .
-      - name: Smoke test
-        run: docker run --rm rust-stakeholder --list-values
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler: false
+      - run: ruby bin/ruby-stakeholder --list-values
+      - run: ruby bin/ruby-stakeholder --dev-type security --jargon high --complexity extreme --alerts --team --trace --seed 41 --output-format json --duration 0 --project hospital-ocpp-quantum-control --framework mcp-grpc

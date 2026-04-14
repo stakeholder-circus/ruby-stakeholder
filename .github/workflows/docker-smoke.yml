@@ -10,4 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: docker build -t ruby-stakeholder .
-      - run: docker run --rm ruby-stakeholder
+      - run: docker run --rm ruby-stakeholder --list-values
+      - run: docker run --rm ruby-stakeholder --dev-type security --jargon high --complexity extreme --alerts --team --trace --seed 41 --output-format json --duration 0 --project hospital-ocpp-quantum-control --framework mcp-grpc
+      - run: docker run --rm ruby-stakeholder --experimental-provider openai-compatible
+        continue-on-error: true

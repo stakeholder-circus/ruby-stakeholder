@@ -1,4 +1,5 @@
-FROM alpine:3.20
-LABEL org.opencontainers.image.title="ruby-stakeholder"
-LABEL org.opencontainers.image.description="Scaffold-only placeholder container for ruby-stakeholder"
-CMD ["sh", "-lc", "echo 'ruby-stakeholder scaffold-only baseline';"]
+FROM ruby:3.3-alpine
+WORKDIR /app
+COPY . .
+RUN ruby scripts/validate_contract.rb && ruby -Ilib -Itest test/test_ruby_stakeholder.rb
+ENTRYPOINT ["bin/ruby-stakeholder"]

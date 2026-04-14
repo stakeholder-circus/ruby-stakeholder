@@ -1,13 +1,13 @@
 > [!WARNING]
-> This repository is AI-assisted and manually reviewed. It is currently a local-only scaffold in the next-20 autonomous sprint.
+> This repository is AI-assisted and manually reviewed. It now carries the deterministic Ruby first-tranche implementation locally.
 
 # ruby-stakeholder
 
-Ruby scaffold under stakeholder-circus.
+Ruby stakeholder runtime under stakeholder-circus.
 
 ## Status
-- Selected for the next-20 autonomous sprint.
-- Local-only scaffold; no upstream tracking and no publication yet.
+- Deterministic first tranche is implemented locally.
+- Local-only scaffold remains unpublished; no upstream tracking yet.
 - Default branch remains `main`; active work happens on the repo-specific baseline branch.
 
 ## Role
@@ -21,8 +21,8 @@ Ruby scaffold under stakeholder-circus.
 
 ## Current guardrail
 - Missing behavior must fail fast and be recorded in `GAPS.md`.
-- The scaffold baseline is authoritative until implementation starts.
-- Use Homebrew Ruby, not macOS /usr/bin/ruby.
+- The deterministic Ruby tranche is authoritative until the follow-on wave.
+- Use Homebrew Ruby, not macOS `/usr/bin/ruby`.
 
 ## Documentation
 - [STATUS.md](STATUS.md)
