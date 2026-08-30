@@ -10,8 +10,11 @@ permissions:
 jobs:
   docker-smoke:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
       - run: docker build -t ruby-stakeholder .
       - run: docker run --rm ruby-stakeholder --list-values
       - run: docker run --rm ruby-stakeholder --focus-family code_analyzer --seed 41 --output-format json
